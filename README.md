@@ -7,3 +7,9 @@ To add:
 Discretize: prop['latitude'] = pd.qcut(prop['latitude'], 20, labels=False)
 
 Remove outliers: df[df.apply(lambda x: np.abs(x - x.mean()) / x.std() < 3).all(axis=1)]
+
+Find by value: lgb.loc[lgb['ParcelId'] == 10754147]
+
+Merge: b=pd.merge(left=my, right=lgb, on=('ParcelId'))
+
+Add dfs
