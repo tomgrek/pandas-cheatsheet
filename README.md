@@ -13,3 +13,10 @@ Find by value: lgb.loc[lgb['ParcelId'] == 10754147]
 Merge: b=pd.merge(left=my, right=lgb, on=('ParcelId'))
 
 Add dfs
+
+Make categorical into one-hot:
+train['transactiondate_quarter'] = train['transactiondate'].dt.quarter
+pd.get_dummies(train['transactiondate_quarter'], prefix='q')
+d = pd.get_dummies(train['transactiondate_quarter'], prefix='q')
+train.join(d)
+
