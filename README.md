@@ -22,3 +22,6 @@ train.join(d)
 
 Select rows which are not nan:
 prop[~np.isnan(prop['censustractandblock'])]
+
+Get everything in the same order just before converting it to an np array:
+x_test = x_test.reindex_axis(sorted(x_test.columns), axis=1)
