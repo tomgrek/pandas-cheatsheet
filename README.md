@@ -20,3 +20,5 @@ pd.get_dummies(train['transactiondate_quarter'], prefix='q')
 d = pd.get_dummies(train['transactiondate_quarter'], prefix='q')
 train.join(d)
 
+Select rows which are not nan:
+prop[~np.isnan(prop['censustractandblock'])]
