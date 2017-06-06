@@ -42,3 +42,6 @@ df.loc[df['column_name'] != some_value]
 isin returns a boolean Series, so to select rows whose value is not in some_values, negate the boolean Series using ~:
 
 df.loc[~df['column_name'].isin(some_values)]
+
+Replace values:
+df.replace(666, np.nan)
